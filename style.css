@@ -1,0 +1,51 @@
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("img/khodam.jpg");
+  background-size: cover;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.kotak {
+  background-color: #b3b3b376;
+  width: 70vw;
+  border: 3px solid white;
+  padding-bottom: 1rem;
+  border-radius: 20px;
+}
+
+.block {
+  display: block;
+}
+
+::placeholder {
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.align-center {
+  margin: 0 auto 0.8rem;
+}
+
+.judul {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.text-color {
+  color: #e3fffd;
+}

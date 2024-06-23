@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cek Khodam</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="center">
+        <div class="kotak">
+          <h1 class="text-center text-color judul">Cek Khodam</h1>
+          <p class="text-center text-color">Check Khodam yang ada di dalam diri kamu</p>
+          <div class="input-group mb-3 w-75 align-center">
+            <input type="text" id="nameInput" class="form-control" placeholder="Tulis Nama Kamu . . ." aria-label="Username" aria-describedby="basic-addon1" autocomplete="off" />
+          </div>
+          <input class="btn btn-light align-center block w-75" id="submitButton" type="submit" value="Cek Khodam" />
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      document.getElementById("submitButton").addEventListener("click", function () {
+        const name = document.getElementById("nameInput").value;
+        const khodam = [
+          "Panci Bolong",
+          "Wajan Gosong",
+          "Roger Sumatra",
+          "Ikan Mabuk Laut",
+          "Nasi Padang",
+          "Sate Padang",
+          "Piring Pecah",
+          "Ban Bocor",
+          "Kopi Sachet",
+          "Kantong Kering",
+          "Mangut Lele",
+          "Kopi Luwak",
+          "Icikiwir",
+          "Ikan Sunda",
+          "Sepeda Kebo",
+          "Kambing Hitam",
+          "Buaya Darat",
+          "Celana Bolong",
+          "Kaos Kaki Bolong",
+          "Buku Utang",
+          "Kartu Kredit",
+          "Pinjaman Online",
+          "Paylater",
+          "Sapu Ijuk",
+          "Kue Balok",
+          "HP Second",
+          "Motor Second",
+          "Civic Turbo",
+          "Laptop Gaming",
+          "Laptop Kentang",
+          "Kentang Goreng",
+          "Kraby Patty",
+          "Spatula",
+          "Penggaruk Punggung",
+          "Mobil Second",
+          "Service AC",
+          "Colokan Listrik",
+          "Kos Campur",
+          "Baju Dinas",
+          "Plat Merah",
+          "Aspal Bolong",
+          "Si Kancil Anak Nakal",
+          "Kupu Malam",
+          "Kucing Garong",
+          "Buah Naga",
+          "Kunang Kunang",
+          "Es Teh Anget",
+          "Colokan HP",
+          "Meja Belajar",
+          "Lampu Tidur",
+          "Lampu Merah",
+          "Simpang Tiga",
+          "Simpang Lima",
+          "Kaki Lima",
+          "Paket Internet",
+          "Air Panas",
+          "Air Ketuban",
+          "Air Es",
+          "Karpet Merah",
+          "Darah Biru",
+          "Uang Kuliah Tunggal",
+          "Manual Book",
+          "Buku Memasak",
+          "Tutorial Youtube",
+          "String Gitar",
+          "Gelas Setengah Penuh",
+          "Gelas Setengah Kosong",
+          "Kopi Pahit",
+          "Kopi Manis",
+          "Ular Sanca",
+          "Ular Cobra",
+          "Kecoak Terbang",
+          "Tanah Liat",
+          "Tanah Sengketa",
+          "Abu Vulkanik",
+          "Arang Kayu",
+          "Kucing Anggora",
+          "Kucing Kampung",
+          "Kucing Blasteran",
+          "PT. Mencari Cinta Sejati",
+          "Ular Sanca",
+          "Pocong Gundul",
+          "Kuyang Drible",
+          "Genderuwo Rebonding",
+          "Kunti Abis Laundry",
+          "Tuyul TK Paud",
+          "Anarkis Jualan Baju",
+          "The Nuruls",
+          "Ikan Lohan",
+          "Black Cat Dead",
+          "Suster Ngepot",
+          "Ayam Geprek",
+          "Ayam Kate",
+          "Ayam Kampus",
+          "Ayam Jago",
+          "Jago Kandang",
+          "Angan Angan",
+          "Serba Seribu",
+          "Nasi Goreng",
+          "Nasi Padang",
+          "Air Keran",
+          "Garam Lautan",
+          "Jangkrik Bos",
+          "Warung Kopi",
+          "Alap Alap",
+          "Ceker Ayam",
+          "Kaki Seratus",
+          "Mamalia",
+          "Prikitiew",
+          "Sleketep",
+        ];
+
+        const randomIndex = Math.floor(Math.random() * khodam.length);
+        const randomKhodam = khodam[randomIndex];
+
+        if (name) {
+          document.body.innerHTML = `
+            <div class="container">
+                <div class="center">
+                    <div class="kotak">
+                        <h1 class="text-center text-color judul">Cek Khodam</h1>
+                        <p class="text-center text-color">Khodam yang ada di dalam diri <b>${name}</b></p>
+                        <h2 class="text-center text-color judul">${randomKhodam}</h2>
+                        <p class="text-center text-color">Jangan lupa share ke temen lain agar mereka tahu sosok dalam diri kalian</p>
+                        <input class="btn btn-light align-center block" id="refreshButton" type="submit" value="Refresh" />
+                    <div>
+                <div>
+            <div>
+                `;
+
+          document.getElementById("refreshButton").addEventListener("click", function () {
+            location.reload();
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
